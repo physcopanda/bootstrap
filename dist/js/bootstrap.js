@@ -2243,7 +2243,7 @@ if (typeof jQuery === 'undefined') {
     var position     = this.$element.offset()
     var targetHeight = this.$target.height()
 
-    if (offsetTop != null && this.affixed == 'top') return scrollTop < offsetTop ? 'top' : false
+    if (offsetTop != null && this.affixed == 'top') return scrollTop <= offsetTop ? 'top' : false
 
     if (this.affixed == 'bottom') {
       if (offsetTop != null) return (scrollTop + this.unpin <= position.top) ? false : 'bottom'
