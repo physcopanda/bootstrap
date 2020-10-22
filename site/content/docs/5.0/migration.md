@@ -21,6 +21,10 @@ toc: true
 
 - Introduce `$enable-smooth-scroll`, which applies `scroll-behavior: smooth` globally—except for users asking for reduced motion through `prefers-reduced-motion` media query. [See #31877](https://github.com/twbs/bootstrap/pull/31877)
 
+### Forms
+
+- File inputs now use the `.form-control` class and don't require any javascript anymore. [See #31955](https://github.com/twbs/bootstrap/pull/31955).
+
 ## v5.0.0-alpha2
 
 ### Sass
@@ -250,7 +254,7 @@ Changes to Reboot, typography, tables, and more.
 - Updated file input component with the same overall design, but improved HTML.
   - Refactored `.form-file` markup to resolve some visual bugs while allowing translation and button text changes via HTML instead of CSS.
   - Dropped native `.form-control-file` and `.form-control-range` components entirely.
-  - Renamed `.custom-file` to `.form-file` (including variables).
+  - Renamed `.custom-file` to `.form-file` (including variables). **Watch out:** `.form-file` was later on dropped in `v5.0.0-alpha3`, now you can use `.form-control`.
   - Added support for `:focus` and `:disabled` styles.
 - Renamed `.custom-range` to `.form-range` (including variables).
 - Dropped `.form-group` for margin utilities (we've replaced our docs examples with `.mb-3`).
